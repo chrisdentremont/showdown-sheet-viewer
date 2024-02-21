@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Showdown Team Sheet Viewer",
+  "description": "An extension for Pokemon Showdown that lets you view a team sheet in-game on the PokePaste website.",
+  "version": "1.0",
+  "action": {
+    "default_popup": "hello.html",
+    "default_icon": "hello_extensions.png"
+  },
+  "content_scripts": [
+    {
+      "js": ["scripts/script.js"],
+      "matches": ["https://play.pokemonshowdown.com/*"]
+    }
+  ],
+  "icons": {
+    "128": "icon.png"
+  }
+}
