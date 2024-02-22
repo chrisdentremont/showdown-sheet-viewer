@@ -1,70 +1,53 @@
-function waitForElm(selector) {
-  return new Promise((resolve) => {
-    if (document.querySelector(selector)) {
-      return resolve(document.querySelector(selector));
-    }
-
-    const observer = new MutationObserver((mutations) => {
-      if (document.querySelector(selector)) {
-        observer.disconnect();
-        resolve(document.querySelector(selector));
-      }
-    });
-
-    observer.observe(document.body, {
-      childList: true,
-      subtree: true,
-    });
-  });
-}
-
 function openTeamSheetWindow() {
+  let usernameText = document.querySelector(".usernametext").textContent.trim();
+  let opponentName = "";
+
   let pasteText = "";
-  let detailElements = document.querySelectorAll(".infobox > details[open]");
-  if (detailElements.length > 0) {
-    if (detailElements.length == 1) {
-      let detailArray = [...detailElements];
 
-      detailArray.forEach((detail) => {
-        detail.removeChild(detail.firstChild);
-
-        let children = detail.childNodes;
-        let startIndex = 0;
-        while (children[startIndex].nodeName != "BR") {
-          startIndex++;
-        }
-        startIndex++;
-
-        let lastNodeBR = false;
-        for (var i = startIndex; i < children.length; i++) {
-          var child = children[i];
-
-          if (child.nodeName == "#text") {
-            if (child.textContent != "  ") {
-              pasteText += child.textContent.trim();
-              lastNodeBR = false;
-            }
-          }
-          if (child.nodeName == "BR" && !lastNodeBR) {
-            pasteText += "%0D%0A";
-            lastNodeBR = true;
-          } else if (child.nodeName == "BR") {
-            lastNodeBR = false;
-          }
-        }
-
-        window
-          .open("https://pokepast.es/create?paste=" + pasteText, "_blank")
-          .focus();
-      });
-    } else {
-      alert(
-        "Please only open one dropdown of the team sheet you want to view."
-      );
+  let detailElements = document.querySelectorAll(".infobox > details");
+  let detailArray = [...detailElements];
+  let selectedDetail = null;
+  detailArray.forEach((detail) => {
+    let detailSummary = detail.firstChild;
+    if (!detailSummary.textContent.includes(usernameText)) {
+      selectedDetail = detail;
+      opponentName = detailSummary.textContent.substring(20);
     }
-  } else {
-    alert("Please open a team sheet dropdown before clicking this!");
+  });
+
+  let children = selectedDetail.childNodes;
+  let startIndex = 0;
+  while (children[startIndex].nodeName != "BR") {
+    startIndex++;
   }
+  startIndex++;
+
+  let lastNodeBR = false;
+  for (var i = startIndex; i < children.length; i++) {
+    var child = children[i];
+
+    if (child.nodeName == "#text") {
+      if (child.textContent != "  ") {
+        pasteText += child.textContent.trim();
+        lastNodeBR = false;
+      }
+    }
+    if (child.nodeName == "BR" && !lastNodeBR) {
+      pasteText += "%0D%0A";
+      lastNodeBR = true;
+    } else if (child.nodeName == "BR") {
+      lastNodeBR = false;
+    }
+  }
+
+  let title = opponentName + "'s Showdown OTS";
+
+  window
+    .open(
+      "https://pokepast.es/create?paste=" + pasteText + "&title=" + title,
+      "_blank"
+    )
+    .focus();
 }
 
 let viewButton = document.createElement("button");
