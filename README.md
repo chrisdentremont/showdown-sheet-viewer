@@ -1,8 +1,20 @@
-# Pokemon Showdown OTS Viewer
-Adds a button at the top of the chatbox that opens a PokePaste webpage with the selected team. You must click the dropdown for one of the teams to export it to PokePaste.
+<h1 align="center">
+  PokePaste Exporter
+</h1>
 
-![](demo.gif)
+<table align="center">
+  <thead>
+    <tr>
+      <th align="center">&nbsp;v1.2&nbsp;</th>
+      <th align="center">&nbsp;Install on <a href="https://chromewebstore.google.com/detail/showdown-team-sheet-viewe/anicolngapkdmielmdncmojfbhikbhce?hl=en">Chrome</a> · <a href="https://addons.mozilla.org/en-US/firefox/addon/showdown-team-sheet-viewer/">Firefox</a></th>
+    </tr>
+  </thead>
+</table>
 
-The extension can be downloaded [here](https://chromewebstore.google.com/detail/showdown-team-sheet-viewe/anicolngapkdmielmdncmojfbhikbhce?hl=en&authuser=0)
+<br />
+<br />
 
-For the Firefox version of this extension, go [here](https://github.com/chrisdentremont/showdown-sheet-viewer-firefox).
+An extension that enables you to export your opponent's team from Pokemon Showdown and Limitless.
+
+![](showdowndemo.gif)
+![](limitlessdemo.gif)
