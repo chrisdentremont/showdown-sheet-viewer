@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Showdown Team Sheet Viewer",
-  "description": "An extension for Pokemon Showdown that lets you view a team sheet in-game on the PokePaste website.",
-  "version": "1.1",
+  "name": "PokePaste Exporter",
+  "description": "An extension that enables you to export your opponent's team from Pokemon Showdown and Limitless.",
+  "version": "1.2",
   "action": {
     "default_popup": "index.html",
     "default_icon": "icon.png"
@@ -10,7 +10,10 @@
   "content_scripts": [
     {
       "js": ["scripts/script.js"],
-      "matches": ["https://play.pokemonshowdown.com/*"]
+      "matches": [
+        "https://play.pokemonshowdown.com/*",
+        "https://play.limitlesstcg.com/*"
+      ]
     }
   ],
   "icons": {
