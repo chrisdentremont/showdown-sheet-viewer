@@ -18,5 +18,10 @@
   ],
   "icons": {
     "128": "icon.png"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "chris.dentremont@outlook.com"
+    }
   }
 }
