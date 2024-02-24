@@ -1,4 +1,5 @@
 <h1 align="center">
+  <img src="icon.png" height="32" width="32">
   PokePaste Exporter
 </h1>
 
