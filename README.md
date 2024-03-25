@@ -7,7 +7,7 @@
   <thead>
     <tr>
       <th align="center">&nbsp;v1.2&nbsp;</th>
-      <th align="center">&nbsp;Install on <a href="https://chromewebstore.google.com/detail/showdown-team-sheet-viewe/anicolngapkdmielmdncmojfbhikbhce?hl=en">Chrome</a> · <a href="https://addons.mozilla.org/en-US/firefox/addon/showdown-team-sheet-viewer/">Firefox</a></th>
+      <th align="center">&nbsp;Install on <a href="https://chromewebstore.google.com/detail/pokepaste-exporter/eehioifimidcjcdlaehajhdeaekmmdne?hl=en&authuser=0)">Chrome</a> · <a href="https://addons.mozilla.org/en-US/firefox/addon/showdown-team-sheet-viewer/">Firefox</a></th>
     </tr>
   </thead>
 </table>
