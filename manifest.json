@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "PokePaste Exporter",
   "description": "An extension that enables you to export your opponent's team from Pokemon Showdown and Limitless.",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "action": {
     "default_popup": "index.html",
     "default_icon": "icon.png"

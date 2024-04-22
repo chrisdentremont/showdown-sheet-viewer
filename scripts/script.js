@@ -213,6 +213,41 @@ function viewLimitlessPaste() {
  * @returns The newly formatted name, or the same name if no special cases were found.
  */
 function checkForSpecialName(name, items) {
+  //Calyrexes
+  if (name == "Shadow Rider Calyrex") {
+    name = "Calyrex-Shadow";
+  }
+  if (name == "Ice Rider Calyrex") {
+    name = "Calyrex-Ice";
+  }
+
+  //Kyurems
+  if (name == "White Kyurem") {
+    name = "Kyurem-White";
+  }
+  if (name == "Black Kyurem") {
+    name = "Kyurem-Black";
+  }
+
+  //Dialgia/Palkia/Giratina Origin Formes
+  if (name == "Origin Forme Dialga") {
+    name = "Dialga-Origin";
+  }
+  if (name == "Origin Forme Palkia") {
+    name = "Palkia-Origin";
+  }
+  if (name == "Origin Forme Giratina") {
+    name = "Giratina-Origin";
+  }
+
+  //Necrozma Forms
+  if (name == "Dawn Wings Necrozma") {
+    name = "Necrozma-Dawn-Wings";
+  }
+  if (name == "Dusk Mane Necrozma") {
+    name = "Necrozma-Dusk-Mane";
+  }
+
   //Indeedee-F
   if (name.includes(" ♀")) {
     name = name.replaceAll(" ♀", "-F");
