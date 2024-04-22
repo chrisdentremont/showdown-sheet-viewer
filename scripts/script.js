@@ -171,7 +171,7 @@ function viewLimitlessPaste() {
 
       //Attacks
       pokemonAttacksDiv.childNodes.forEach((move) => {
-        currentMonText += move.innerText + "%0D%0A";
+        currentMonText += "- " + move.innerText + "%0D%0A";
       });
 
       pasteText += currentMonText + "%0D%0A";
